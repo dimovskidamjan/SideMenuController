@@ -206,14 +206,14 @@ open class SideMenuController: UIViewController, UIGestureRecognizerDelegate {
     override open func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
-        coordinator.animate(alongsideTransition: { _ in
+        coordinator.animate(alongsideTransition: {
             self.repositionViews()
         }, completion: nil)
     }
     
     // MARK: - Configurations -
     
-    func repositionViews() {
+    @objc func repositionViews() {
         
         if sidePanelVisible {
             toggle()
